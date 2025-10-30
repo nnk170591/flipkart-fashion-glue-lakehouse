@@ -134,15 +134,6 @@ GROUP BY category
 ORDER BY total_products DESC;
 ```
 
----
-
-##  Architecture Diagram
-
-*(If you have the diagram generated, place it here for visual impact)*  
-Example:  
-`/docs/diagrams/flipkart-lakehouse-architecture.png`
-
----
 
 ##  Tech Stack
 
