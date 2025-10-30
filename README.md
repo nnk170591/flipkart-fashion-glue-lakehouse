@@ -1,11 +1,11 @@
-# 🛍️ Flipkart Fashion Data Lakehouse  
+#  Flipkart Fashion Data Lakehouse  
 _A Modern AWS Glue + Athena Pipeline (with CDK & GitHub Actions)_
 
 ![Architecture](./docs/diagrams/flipkart-lakehouse-architecture.png)
 
 ---
 
-## 📖 Overview
+##  Overview
 
 This project builds an **end-to-end AWS data lakehouse** for Flipkart Fashion data using a **Medallion Architecture (Raw → Bronze → Silver → Gold)**.
 
@@ -18,14 +18,14 @@ It demonstrates modern **data engineering principles**, including:
 
 ---
 
-## 🧱 Architecture Summary
+##  Architecture Summary
 
 | Layer | Storage | Format | Description |
 |--------|----------|---------|--------------|
-| 🪶 Raw | S3 | CSV | Original Kaggle dataset uploaded manually |
-| 🥉 Bronze | S3 | Parquet | Cleaned & normalized raw data |
-| 🥈 Silver | S3 | Parquet | Enriched, structured fashion product data |
-| 🥇 Gold | S3 | Parquet | Aggregated metrics (brand/category-level summaries) |
+|  Raw | S3 | CSV | Original Kaggle dataset uploaded manually |
+|  Bronze | S3 | Parquet | Cleaned & normalized raw data |
+|  Silver | S3 | Parquet | Enriched, structured fashion product data |
+|  Gold | S3 | Parquet | Aggregated metrics (brand/category-level summaries) |
 
 **AWS Components**
 - **S3** → Data lake zones  
@@ -38,7 +38,7 @@ It demonstrates modern **data engineering principles**, including:
 
 ---
 
-## ⚙️ Getting Started (Your Own AWS Account)
+##  Getting Started (Your Own AWS Account)
 
 ### 1️⃣ Prerequisites
 - AWS account with Admin or PowerUser permissions  
@@ -73,21 +73,21 @@ cdk deploy
 ```
 
 This will create:
-- 🪣 S3 buckets (`raw`, `processed`, `analytics`)
-- 🧮 Glue ETL Jobs:  
+-  S3 buckets (`raw`, `processed`, `analytics`)
+-  Glue ETL Jobs:  
   `flipkart_raw_to_bronze_job`, `flipkart_bronze_to_silver_job`, `flipkart_silver_to_gold_job`
-- 🕷️ Crawlers:  
+-  Crawlers:  
   `flipkart_raw_crawler`, `flipkart_bronze_crawler`, `flipkart_silver_crawler`, `flipkart_gold_crawler`
-- 🧠 Glue Database: `flipkart_fashion_db`
-- 🔁 Workflow: `flipkart_fashion_etl_workflow`
+-  Glue Database: `flipkart_fashion_db`
+-  Workflow: `flipkart_fashion_etl_workflow`
 
 ---
 
-## 🧩 Load Data & Run Pipeline
+##  Load Data & Run Pipeline
 
 ### 1️⃣ Upload Dataset
 Download from Kaggle:  
-👉 [Flipkart Fashion Products Dataset](https://www.kaggle.com/datasets/aaditshukla/flipkart-fasion-products-dataset)
+[Flipkart Fashion Products Dataset](https://www.kaggle.com/datasets/aaditshukla/flipkart-fasion-products-dataset)
 
 Then upload it to the raw bucket:
 ```bash
@@ -137,7 +137,7 @@ ORDER BY total_products DESC;
 
 ---
 
-## 🧮 Architecture Diagram
+##  Architecture Diagram
 
 *(If you have the diagram generated, place it here for visual impact)*  
 Example:  
@@ -145,7 +145,7 @@ Example:
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 | Category | Tool | Purpose |
 |-----------|------|----------|
@@ -159,7 +159,7 @@ Example:
 
 ---
 
-## 🧾 Outputs
+##  Outputs
 
 | Resource | Name |
 |-----------|------|
@@ -171,7 +171,7 @@ Example:
 
 ---
 
-## 🛡️ Security & Cost Optimizations
+##  Security & Cost Optimizations
 - S3 Buckets encrypted with SSE-S3  
 - Glue roles scoped with least privilege  
 - Parquet + partitioning reduces Athena query cost  
@@ -179,7 +179,7 @@ Example:
 
 ---
 
-## 🧩 Future Enhancements
+##  Future Enhancements
 - Add Great Expectations data quality suite  
 - Integrate with QuickSight for visualization  
 - Add CI/CD smoke tests and environment promotion  
@@ -187,7 +187,7 @@ Example:
 
 ---
 
-## ✨ Portfolio Value
+##  Portfolio Value
 
 This project showcases:
 - **End-to-end AWS Glue pipeline design**
@@ -195,7 +195,3 @@ This project showcases:
 - **Modern data engineering best practices**
 - **Production-grade CI/CD setup**
 
----
-
-> 💬 _“Deploy once, analyze anywhere.”_  
-Built with ❤️ using AWS CDK, Glue, and Athena.
