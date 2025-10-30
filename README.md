@@ -1,7 +1,6 @@
-#  Flipkart Fashion Data Lakehouse  
+# Flipkart Fashion Data Lakehouse  
 _A Modern AWS Glue + Athena Pipeline (with CDK & GitHub Actions)_
 
-![Architecture](./docs/diagrams/flipkart-lakehouse-architecture.png)
 
 ---
 
@@ -87,7 +86,7 @@ This will create:
 
 ### 1️⃣ Upload Dataset
 Download from Kaggle:  
-[Flipkart Fashion Products Dataset](https://www.kaggle.com/datasets/aaditshukla/flipkart-fasion-products-dataset)
+ [Flipkart Fashion Products Dataset](https://www.kaggle.com/datasets/aaditshukla/flipkart-fasion-products-dataset)
 
 Then upload it to the raw bucket:
 ```bash
